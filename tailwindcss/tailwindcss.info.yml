@@ -1,5 +1,5 @@
-name: Tailwind CSS Starter Kit
-description: A starter kit theme for Drupal 8 and Tailwind CSS.
+name: Portfolio Theme One
+description: Portfolio theme for Drupal 9 made with Tailwind CSS.
 core: 8.x
 core_version_requirement: ^8 || ^9
 type: theme
@@ -8,6 +8,6 @@ libraries:
   - tailwindcss/global-styling
 
 # Information added by Drupal.org packaging script on 2021-02-05
-version: '4.0.0-rc2'
-project: 'tailwindcss'
+version: "4.0.0-rc2"
+project: "tailwindcss-portfolio-1"
 datestamp: 1612525510
