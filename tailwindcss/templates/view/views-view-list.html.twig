@@ -32,7 +32,11 @@
     <h3>{{ title }}</h3>
   {% endif %}
 
+  {% if attributes.storage.class[0] == 'portfolio-one-work' %}
+    <ul class="grid md:grid-cols-2">
+  {% else %}
   <{{ list.type }}{{ list.attributes }}>
+  {% endif %}
 
     {% for row in rows %}
       <li{{ row.attributes }}>
