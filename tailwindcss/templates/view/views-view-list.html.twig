@@ -19,10 +19,14 @@
  */
 #}
 
+{#
 {{ vardumper(attributes) }}
 {{ vardumper(attributes.storage) }}
 {{ vardumper(attributes.storage.class) }}
 {{ vardumper(attributes.storage.class[0]) }}
+#}
+
+{{ vardumper(rows) }}
 
 
 {% if attributes -%}
@@ -49,3 +53,5 @@
 {% if attributes -%}
   </div>
 {% endif %}
+
+
