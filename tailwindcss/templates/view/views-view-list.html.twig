@@ -28,11 +28,14 @@
 
 
 {{ vardumper(attributes) }}
+
 <div>----1----</div>
+
 {{ vardumper(attributes.storage.class) }}
+
 <div>-----2-----</div>
 
-{{ vardumper(attributes.storage.class.value) }}
+{{ vardumper(attributes.storage.class[0].value) }}
 
 <div>----3---</div>
 {% if attributes -%}
