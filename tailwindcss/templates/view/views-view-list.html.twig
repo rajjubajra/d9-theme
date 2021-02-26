@@ -23,21 +23,18 @@
 {{ vardumper(attributes) }}
 {{ vardumper(attributes.storage) }}
 {{ vardumper(attributes.storage.class) }}
-{{ vardumper(attributes.storage.class[0]) }}
+
 #}
 
 
-{{ vardumper(attributes) }}
-
-<div>----1----</div>
-
-{{ vardumper(attributes.storage.class) }}
-
-<div>-----2-----</div>
-
-{{ vardumper(attributes.storage.class[0]) }}
-
-<div>----3---</div>
+{# 
+  IMPORTNAT NOTE: 
+  "portfolio-one-work" must be defined in View
+  that is in Veiw Format/ [HTML List/settings] /
+  List Type : Unorder list
+  Wrapper class : "portfolio-one-work"
+  debug: {{ vardumper(attributes.storage.class[0]) }}
+  #}
 
 {% if attributes -%}
   <div{{ attributes }}>
@@ -46,9 +43,12 @@
     <h3>{{ title }}</h3>
   {% endif %}
 
-  {% if attributes.storage.class[0] == 'portfolio-one-work' %}
+  {% if attributes.storage.class[0] == 'portfolio-one-work-image' %}
     <ul class="grid md:grid-cols-2">
+  {% elseif attributes.storage.class[0] == 'portfolio-one-work-text'  %}
+    <ul class="flex">
   {% else %}
+
   <{{ list.type }}{{ list.attributes }}>
   {% endif %}
 
