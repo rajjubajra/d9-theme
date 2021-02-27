@@ -55,8 +55,8 @@
     {% for row in rows %}
       <li{{ row.attributes }}>
        {# {{- row.content -}} #}
-        <h3>{{- row.content.view.field.title -}}</h3>
-        <div>{{- row.content.view.field.field_work_page_image -}}</div>
+        <h3>{{ row.content.view.field.title }}</h3>
+        <div>{{ row.content.view.field.field_work_page_image }}</div>
       </li>
     {% endfor %}
 
