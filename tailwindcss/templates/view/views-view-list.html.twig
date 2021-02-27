@@ -43,21 +43,28 @@
     <h3>{{ title }}</h3>
   {% endif %}
 
+
   {% if attributes.storage.class[0] == 'portfolio-one-work-image' %}
     <ul class="grid md:grid-cols-2">
+      {% for row in rows %}
+      <li{{ row.attributes.addClass("text-2xl font-light") }}>
+       {{- row.content -}} 
+      {% endfor %}
+     </ul> 
   {% elseif attributes.storage.class[0] == 'portfolio-one-work-text'  %}
     <ul class="flex">
+      {% for row in rows %}
+      <li{{ row.attributes.addClass('font-light') }}>
+       {{- row.content -}} 
+    {% endfor %}
+    </ul>
   {% else %}
-
   <{{ list.type }}{{ list.attributes }}>
   {% endif %}
-
     {% for row in rows %}
       <li{{ row.attributes }}>
-        {{- row.content -}}
-      </li>
+       {{- row.content -}} 
     {% endfor %}
-
   </{{ list.type }}>
 
 {% if attributes -%}
