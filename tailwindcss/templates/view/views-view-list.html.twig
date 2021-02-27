@@ -48,21 +48,21 @@
     <ul class="grid md:grid-cols-2 md:gap-10 gap-4">
       {% for row in rows %}
       <li{{ row.attributes.addClass("text-2xl font-light") }}>
-       {{- row.content -}} 
+      {{- row.content -}} 
       {% endfor %}
-     </ul> 
-  {% elseif attributes.storage.class[0] == 'portfolio-one-work-text'  %}
+    </ul> 
+  {% elseif attributes.storage.class[0] == 'portfolio-one-work-text mt-5'  %}
     <ul class="flex">
       {% for row in rows %}
       <li{{ row.attributes.addClass('font-light') }}>
-       {{- row.content -}} 
+      {{- row.content -}} 
     {% endfor %}
     </ul>
   {% else %}
   <{{ list.type }}{{ list.attributes }}>
     {% for row in rows %}
       <li{{ row.attributes }}>
-       {{- row.content -}} 
+      {{- row.content -}} 
     {% endfor %}
   </{{ list.type }}>
   {% endif %}
