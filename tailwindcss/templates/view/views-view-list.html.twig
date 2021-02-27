@@ -55,7 +55,7 @@
     {% for row in rows %}
       <li{{ row.attributes }}>
        {# {{- row.content -}} #}
-       {{vardumper(row.content.view.field)}}
+       {{ vardumper(row.content.view) }}
         <h3>{{ row.content.view.field.title.title }}</h3>
         <div>{{ row.content.view.field.field_work_page_image.field_work_page_image }}</div>
       </li>
