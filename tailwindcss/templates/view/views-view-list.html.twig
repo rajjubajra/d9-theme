@@ -60,13 +60,12 @@
     </ul>
   {% else %}
   <{{ list.type }}{{ list.attributes }}>
-  {% endif %}
     {% for row in rows %}
       <li{{ row.attributes }}>
        {{- row.content -}} 
     {% endfor %}
   </{{ list.type }}>
-
+  {% endif %}
 {% if attributes -%}
   </div>
 {% endif %}
