@@ -36,19 +36,20 @@
   debug: {{ vardumper(attributes.storage.class[0]) }}
   #}
 
-
   {% if attributes -%}
-    <div{{ attributes }}>
-  {% endif %}
-  
+  <div{{ attributes }}>
+{% endif %}
   {% if title %}
     <h3>{{ title }}</h3>
   {% endif %}
 
-    <ul class="grid md:grid-cols-2 md:gap-10 gap-4">
+  
+    <ul class="flex mt-5">
       {% for row in rows %}
-      <li class="text-2xl font-light">
+      <li class="font-light" >
       {{- row.content -}} 
       </li>
-      {% endfor %}
+    {% endfor %}
     </ul>
+  
+
