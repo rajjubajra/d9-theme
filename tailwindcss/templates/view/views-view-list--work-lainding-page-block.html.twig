@@ -36,37 +36,19 @@
   debug: {{ vardumper(attributes.storage.class[0]) }}
   #}
 
-{% if attributes -%}
-  <div{{ attributes }}>
-{% endif %}
+
+  {% if attributes -%}
+    <div{{ attributes }}>
+  {% endif %}
+  
   {% if title %}
     <h3>{{ title }}</h3>
   {% endif %}
 
-
-  {% if attributes.storage.class[0] == 'portfolio-one-work-image' %}
     <ul class="grid md:grid-cols-2 md:gap-10 gap-4">
       {% for row in rows %}
-      <li{{ row.attributes.addClass("text-2xl font-light") }}>
+      <li class="text-2xl font-light">
       {{- row.content -}} 
+      </li>
       {% endfor %}
-    </ul> 
-  {% elseif attributes.storage.class[0] == 'portfolio-one-work-text'  %}
-    <ul class="flex mt-5">
-      {% for row in rows %}
-      <li{{ row.attributes.addClass('font-light') }}>
-      {{- row.content -}} 
-    {% endfor %}
     </ul>
-  {% else %}
-  <{{ list.type }}{{ list.attributes }}>
-    {% for row in rows %}
-      <li{{ row.attributes }}>
-      {{- row.content -}} 
-    {% endfor %}
-  </{{ list.type }}>
-  {% endif %}
-{% if attributes -%}
-  </div>
-{% endif %}
-
