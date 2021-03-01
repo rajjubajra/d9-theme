@@ -49,9 +49,8 @@
       {% for row in rows %}
       <li class="text-2xl font-light">
       {{- row.content -}} 
-
-      {{ vardumper(row.content) }}
-      
       </li>
       {% endfor %}
     </ul>
+
+    {{ vardumper(row.content.row) }}
