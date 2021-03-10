@@ -32,7 +32,7 @@
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('flex font-light') }}>
     {% else %}
-      <ul class="flex font-bold">
+      <ul class="flex hidden">
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes.addClass('mr-2') }}>
