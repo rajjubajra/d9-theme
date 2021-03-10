@@ -33,12 +33,10 @@
 #}
 
 
-{% set imgurl =  {{ fields.field_lms_home_image.content }} %}
-
 {% set image = {
   '#theme':      'image_style',
   '#style_name': 'w-full h-64 object-cover',
-  '#uri':        imgurl,
+  '#uri':        {{ fields.field_lms_home_image.content }},
   '#alt':        'LMS home',
 } %}
 
