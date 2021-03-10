@@ -41,9 +41,7 @@
 {% set image_uri = fields.field_lms_home_image.content %}
 
 <div class="w-full h-64">
-<img src="{{ image_uri|image_style('w-full h-48 object-cover') }}"/>
-{{ image_uri }}
-<img src="{{ image_uri|file_url }}"/>
+  {{ drupal_image(image_uri, 'w-full h-48 object-cover', {alt: 'The alternative text'|t, title: 'The title text'|t}) }}
 </div>
 
 <div class="w-full font-light">
