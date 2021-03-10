@@ -33,7 +33,11 @@
 #}
 
 <div class="w-full h-64">
-{{ fields.field_lms_home_image.content }}
+  <img 
+  class="h-72 w-full object-cover"
+  src={{ fields.field_lms_home_image.content }}
+  alt="lms"
+  />
 </div>
 <div class="w-full font-light">
   {{ fields.field_lms_home_body.content }}
