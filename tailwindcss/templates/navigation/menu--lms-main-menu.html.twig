@@ -38,8 +38,8 @@
       <li{{ item.attributes.addClass('mr-2') }}>
         <a href={{item.url}} >{{item.title}} 1</a>
         {% if item.below %}
-           {{ vardumper(menus.menu_links)}} 2
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+           {{ vardumper(item)}} 2
+          {{ menus.menu_links(item.below, attributes.addClass('hidden'), menu_level + 1) }}
         {% endif %}
       </li>
     {% endfor %}
