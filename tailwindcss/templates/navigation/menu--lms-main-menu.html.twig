@@ -32,11 +32,11 @@
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('flex font-light') }}>
     {% else %}
-      <ul class="flex hidden">
+      <ul class="flex hidden" id="sub-menu">
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes.addClass('mr-2') }}>
-        <a href={{item.url}}  >{{item.title}}1</a>
+        <a href={{item.url}}  id="main-menu" >{{item.title}}1</a>
         {% if item.below %}
         2
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
