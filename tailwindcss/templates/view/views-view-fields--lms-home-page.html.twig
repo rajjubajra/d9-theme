@@ -32,10 +32,14 @@
  */
 #}
 
+{%
+set img =   {{ fields.field_lms_home_image.content }}
+  %}
 <div class="w-full h-64">
+  
   <img 
   class="h-72 w-full object-cover"
-  src="{{ fields.field_lms_home_image.content }}"
+  src={{img}}
   alt="lms"
   />
 </div>
