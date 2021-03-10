@@ -36,10 +36,12 @@
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes.addClass('mr-2') }}>
-        <a href={{item.url}}  id="main-menu" >{{item.title}}1</a>
+        
         {% if item.below %}
-        2
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        <a href={{item.url}}  id="main-menu" >{{item.title}}1</a>
+         {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% elseif %}
+        <a href={{item.url}} >{{item.title}}2</a>
         {% endif %}
       </li>
     {% endfor %}
