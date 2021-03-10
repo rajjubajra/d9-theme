@@ -36,11 +36,9 @@
 
 
 
-{% set image_uri = fields.field_lms_home_image.content %}
-
 
 <div class="w-full h-64">
-  <img src="{{ image_uri|file_url }}" alt="lms" />
+  <img src="{{ fields.field_lms_home_image.content|file_url }}" alt="lms" />
   
 </div>
 
