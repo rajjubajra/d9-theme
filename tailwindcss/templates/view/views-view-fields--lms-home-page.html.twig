@@ -38,10 +38,18 @@
   IMPORTANT First install the "Twig Tweak" module
   FOR FOLLOWING img and style 
 #}
-{% set image_uri = fields.field_lms_home_image.content %}
+{% set image = fields.field_lms_home_image.content %}
 
 <div class="w-full h-64">
-  {{ drupal_image(image_uri, 'w-full h-48 object-cover', {alt: 'The alternative text'|t, title: 'The title text'|t}) }}
+  {# Basic usage #}
+{{ image |image_style('thumbnail') }}
+
+{# Make sure to check that the URI is valid #}
+{% set image_uri = fields.field_lms_home_image.content|file_uri %}
+{% if image_uri is not null %}
+  {{ image_uri|image_style('thumbnail') }}
+{% endif %}
+
 </div>
 
 <div class="w-full font-light">
