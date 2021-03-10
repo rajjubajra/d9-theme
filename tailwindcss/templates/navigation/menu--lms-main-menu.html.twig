@@ -36,7 +36,7 @@
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes.addClass('mr-2') }}>
-        <a href={{item.url}} >{{item.title}} 1</a>
+        <a href={{item.url}} >{{item.title}}</a>
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes.addClass('hidden'), menu_level + 1) }}
         {% endif %}
