@@ -38,19 +38,12 @@
   IMPORTANT First install the "Twig Tweak" module
   FOR FOLLOWING img and style 
 #}
-{% set image = fields.field_lms_home_image.content %}
-{{ drupal_image(image) }}
-{{ image }}
+{% set image_uri = fields.field_lms_home_image.content %}
+
+{{ image_uri }}
 <div class="w-full h-64">
-  {# Basic usage #}
-{{ image |image_style('thumbnail') }}
 
-{# Make sure to check that the URI is valid #}
-{% set image_uri = fields.field_lms_home_image.content|file_uri %}
-{% if image_uri is not null %}
-  {{ image_uri|image_style('thumbnail') }}
-{% endif %}
-
+  {{ image_uri|view({settings: {image_style: 'thumbnail'}}) }}
 </div>
 
 <div class="w-full font-light">
