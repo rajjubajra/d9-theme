@@ -33,19 +33,16 @@
 #}
 
 
-{% set image = {
-  '#theme':      'image_style',
-  '#style_name': 'w-full h-64 object-cover',
-  '#uri':        fields.field_lms_home_image.content,
-  '#alt':        'LMS home',
-} 
-%}
 
+
+
+{% set image_uri = fields.field_lms_home_image.content %}
 
 
 <div class="w-full h-64">
-  {{ image }}
+  <img src="{{ image_uri|image_style('w-full h-64 object-cover') }}"/>
 </div>
+
 <div class="w-full font-light">
   {{ fields.field_lms_home_body.content }}
 </div>
