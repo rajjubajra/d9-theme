@@ -35,13 +35,10 @@
 
 
 
-{% set path = fields.field_lms_home_image.content %}
+{% set path =  %}
 
 <div class="w-full h-64">
-  {{ imageUrl }}
-  <img class="top-article-image" 
-
-  src="{{ absolute_url(path) }}" />
+  {{ fields.field_lms_home_image.content.attributes.addClass('w-full h-48 object-cover') }}
 </div>
 
 <div class="w-full font-light">
