@@ -34,11 +34,14 @@
 
 
 
-
-{% set path =  %}
+{#
+  IMPORTANT First install the "Twig Tweak" module
+  FOR FOLLOWING img and style 
+#}
+{% set image_uri = fields.field_lms_home_image.content %}
 
 <div class="w-full h-64">
-  {{ fields.field_lms_home_image.content.attributes.addClass('w-full h-48 object-cover') }}
+<img src="{{ image_uri|image_style('w-full h-48 object-cover') }}"/>
 </div>
 
 <div class="w-full font-light">
