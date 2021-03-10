@@ -39,6 +39,7 @@
   FOR FOLLOWING img and style 
 #}
 {% set image = fields.field_lms_home_image.content %}
+{{ drupal_image(image) }}
 {{ image }}
 <div class="w-full h-64">
   {# Basic usage #}
