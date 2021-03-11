@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Theme override for a local task link.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper element.
+ * - is_active: Whether the task item is an active tab.
+ * - link: A rendered link element.
+ *
+ * Note: This template renders the content for each task item in
+ * menu-local-tasks.html.twig.
+ *
+ * @see template_preprocess_menu_local_task()
+ */
+#}
+<li{{ attributes.addClass('mx-4 px-5 py-2 uppercase tracking-widest border-b-2 hover:border-gray-900') }}>{{ link }}</li>
+
