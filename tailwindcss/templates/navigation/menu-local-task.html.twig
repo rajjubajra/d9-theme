@@ -14,9 +14,7 @@
  * @see template_preprocess_menu_local_task()
  */
 #}
-<li{{ attributes.addClass('mx-2 mt-3') }}>
- <a href={{link.url}} class="px-2 py-2 uppercase tracking-widest border-b-2 hover:border-gray-900 w-32 text-center">{{link.title}}</a>  
+<li{{ attributes.addClass('mx-2 mt-3 px-2 py-2 uppercase tracking-widest border-b-2 hover:border-gray-900 w-32 text-center') }}>
+ {{link}} 
 </li>
 
-{{ vardumper(link) }}
-{{ vardumper(link.title) }}
