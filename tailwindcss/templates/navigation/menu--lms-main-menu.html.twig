@@ -30,12 +30,12 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('flex font-light') }}>
+      <ul{{ attributes.addClass('md:flex font-light') }}>
     {% else %}
       <ul class="hidden" id="sub-menu">
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes.addClass('mr-2') }}>
+      <li{{ item.attributes.addClass('md:mr-2 my-2 md:my-0') }}>
         
         {% if item.below %}
         {# MENU WITH SUB-MENU #}
