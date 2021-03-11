@@ -42,10 +42,14 @@
   {{ title_suffix }}
 
   {# Menu. #}
-  <div class="cursor-pointer" onclick="handleMenu()">
-     <div class="block h-1 w-6 bg-gray-900"></div>
-     <div class="block h-1 w-6 my-1 bg-gray-900"></div>
-     <div class="block h-1 w-6 bg-gray-900"></div>
+  <div 
+  id="lms-menu-icon" 
+  class="cursor-pointer" 
+  onmouseover="handleIcon()"
+  onclick="handleMenu()">
+     <div class="h-1 w-6 bg-gray-900"></div>
+     <div class="h-1 w-6 my-1 bg-gray-900"></div>
+     <div class="h-1 w-6 bg-gray-900"></div>
   </div>
   <div id="lms-main-menu" class="hidden">
     {% block content %}
@@ -55,8 +59,14 @@
 </nav>
 
 <script>
-const lmsmenu = document.getElementById('lms-main-menu');
-const handleMenu = () => (
-  lmsmenu.classList.toggle('hidden')
-)
+  /** SELECT MENU ICON */
+  const lmsMenuIcon = document.getElementById("lms-menu-icon"); 
+  /** SELECT MAIN MENU */
+  const lmsmenu = document.getElementById('lms-main-menu');
+
+    const handleMenu = () => (
+      lmsmenu.classList.toggle('hidden')
+    )
+
+    const handleIcon = () => (console.log("mouse over yes"))
 </script>
