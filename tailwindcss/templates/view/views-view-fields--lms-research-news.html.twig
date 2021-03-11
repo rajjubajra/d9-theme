@@ -32,14 +32,23 @@
  */
 #}
 
-<div class="w-full p-4 my-4 border border-gray-200">
+<div class="w-full p-4 my-4 border border-gray-800">
 
+  {# TITLE #}
   <h2 class="text-2xl">{{ fields.title.content }}</h2>
-  <div>
+
+
+  {#  NEWS BRIEF - BODY #}
+  <div class="mt-3 mb-1">
     {{ fields.field_lms_research_news.content }}
   </div>
-  <div>
+
+  {# REAM MORE BUTTON#}
+  <div class="flex w-full justify-end">
+    <div class="py-2 px-4 border border-gray-600 hover:bg-gray-400">
     {{ fields.field_lms_research_news_links.content }}
+    </div>
   </div>
+  
 
 </div>
