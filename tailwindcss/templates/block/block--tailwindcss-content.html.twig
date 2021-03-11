@@ -25,7 +25,8 @@
  * @see template_preprocess_block()
  */
 #}
-<div{{ attributes.addClass('my-4 grid grid-flow-row gap-10') }}>
+<div class="flex justify-items-center">
+  <div{{ attributes.addClass('my-4 grid grid-flow-row gap-10') }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>
@@ -34,4 +35,6 @@
   {% block content %}
     {{ content }}
   {% endblock %}
+  </div>
 </div>
+
