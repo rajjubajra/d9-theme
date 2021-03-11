@@ -46,12 +46,14 @@
   {% if multiple %}
     <div{{ attributes }}>
       {% for item in items %}
-        <div{{ item.attributes.addClass('uppercase') }}>{{ item.content }}1</div>
+        <div{{ item.attributes }}>
+          <div class="uppercase mt-2">{{ item.content }}</div>
+        </div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass('text-2xl') }}>{{ item.content }}2</div>
+      <div{{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -61,7 +63,7 @@
       <div>
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes }}>{{ item.content }}4</div>
+      <div{{ item.attributes.addClass('mt-4 mb-2') }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>
