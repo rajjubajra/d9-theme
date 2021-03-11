@@ -11,7 +11,7 @@
  */
 #}
 {% apply spaceless %}
-  <select{{ attributes }}>
+  <select{{ attributes.addClass('px-1 py-2 outline-none') }}>
     {% for option in options %}
       {% if option.type == 'optgroup' %}
         <optgroup label="{{ option.label }}">
