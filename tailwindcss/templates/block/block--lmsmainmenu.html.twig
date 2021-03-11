@@ -47,9 +47,13 @@
   class="cursor-pointer" 
   onmouseover="handleIcon()"
   onclick="handleMenu()">
-     <div class="h-1 w-6 bg-gray-900"></div>
-     <div class="h-1 w-6 my-1 bg-gray-900"></div>
-     <div class="h-1 w-6 bg-gray-900"></div>
+     <div id="open" class="h-1 w-6 bg-gray-900"></div>
+     <div id="open" class="h-1 w-6 my-1 bg-gray-900"></div>
+     <div id="open" class="h-1 w-6 bg-gray-900"></div>
+
+     <div id="close" class="h-1 w-6 bg-gray-900 hidden"></div>
+     <div id="close" class="h-1 w-6 bg-gray-900 hidden"></div>
+
   </div>
   <div id="lms-main-menu" class="hidden">
     {% block content %}
@@ -68,5 +72,12 @@
       lmsmenu.classList.toggle('hidden')
     )
 
-    const handleIcon = () => (console.log("mouse over yes"))
+    /** SELECT ICON LINES */
+    const open = document.getElementById("open");
+    const close = document.getElementById("close");
+
+    const handleIcon = () => (
+      open.classList.toggle('hidden'),
+      close.classList.toggle('hidden')
+      )
 </script>
