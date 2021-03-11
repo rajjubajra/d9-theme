@@ -42,7 +42,7 @@
   {{ title_suffix }}
 
   {# Menu. #}
-  <div onclick="handleMenu()">
+  <div class="cursor-pointer" onclick="handleMenu()">
    MENU ICON
   </div>
   <div id="lms-main-menu" class="hidden">
@@ -55,7 +55,6 @@
 <script>
 const lmsmenu = document.getElementById('lsm-main-menu');
 const handleMenu = () => (
-  console.log("yes it is clicked")
-  
+  lmsmenu.classList.toggle('hidden')
 )
 </script>
