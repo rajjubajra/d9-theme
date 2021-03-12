@@ -30,7 +30,7 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('text-xs flex font-thin first:border-r border-gray-900')  v-for="item in items" }}>
+      <ul{{ attributes.addClass('text-xs flex font-thin first:border-r border-gray-900')  }}>
     {% else %}
       <ul>
     {% endif %}
