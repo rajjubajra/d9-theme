@@ -30,12 +30,12 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('text-xs flex font-thin first:border-r border-gray-900')  }}>
+      <ul{{ attributes.addClass('text-xs flex font-thin')  }}>
     {% else %}
       <ul>
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes.addClass('px-4 border-r  border-gray-700') }}>
+      <li{{ item.attributes.addClass('px-4 py-2 hover:border-b  border-gray-900') }}>
         {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
