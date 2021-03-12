@@ -578,7 +578,10 @@ video {
 }
 
 input {
-  border-width: 1px
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #a0aec0;
+  border-color: rgba(160, 174, 192, var(--border-opacity))
 }
 
 .container {
