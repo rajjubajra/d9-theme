@@ -577,13 +577,6 @@ video {
   height: auto;
 }
 
-input {
-  border-width: 1px;
-  --border-opacity: 1;
-  border-color: #a0aec0;
-  border-color: rgba(160, 174, 192, var(--border-opacity))
-}
-
 .container {
   width: 100%;
 }
@@ -610,18 +603,6 @@ input {
   .container {
     max-width: 1280px;
   }
-}
-
-.block,
-  .node {
-  margin-bottom: 1rem
-}
-
-.node__content p,
-  .node__content ul,
-  .node__content ol {
-  margin-bottom: 1rem;
-  line-height: 1.5
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
