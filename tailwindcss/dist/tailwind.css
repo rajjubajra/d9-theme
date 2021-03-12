@@ -19205,8 +19205,10 @@ input {
   animation: bounce 1s infinite;
 }
 
-.mytitle{
+.lms-title{
   font-size: 2.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 640px) {
