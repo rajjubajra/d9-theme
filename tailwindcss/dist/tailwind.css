@@ -577,6 +577,10 @@ video {
   height: auto;
 }
 
+input {
+  border-width: 1px
+}
+
 .container {
   width: 100%;
 }
@@ -603,6 +607,18 @@ video {
   .container {
     max-width: 1280px;
   }
+}
+
+.block,
+  .node {
+  margin-bottom: 1rem
+}
+
+.node__content p,
+  .node__content ul,
+  .node__content ol {
+  margin-bottom: 1rem;
+  line-height: 1.5
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
