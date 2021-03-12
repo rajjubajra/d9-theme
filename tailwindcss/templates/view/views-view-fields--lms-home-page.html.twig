@@ -40,18 +40,23 @@
 #}
 {% set image = fields.field_lms_home_image.content %}
 
+
+{# TITLE #}
 <div class="text-2xl">
   <h2>{{ fields.title.content }}</h2>
 </div>
 
-<div class="text-3xl">
+{# SUMMARY #}
+<div class="text-5xl leading-tight">
   <h2>{{ fields.field_lms_home_page.content }}</h2>
 </div>
 
+{# IMAGE #}
 <div class="home-image">
   {{ image }}
 </div>
 
+{# MAIN BODY CONTENT #}
 <div class="w-full font-light">
   {{ fields.field_lms_home_body.content }}
 </div>
